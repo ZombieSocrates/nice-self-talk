@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Self Pep Talk Plugin",
+  "description": "This extension will analyze a page using GTmetrix",
+  "version": "0.1",
+
+  "browser_action": {
+   "default_icon": "self_love.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab"
+   ]
+}
