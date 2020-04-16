@@ -11,7 +11,6 @@ recognition.interimResults = false;
 
 
 let isListening = false;
-// let resultIndex = 0
 
 recognition.onstart = function () {
   console.log(`Am I listening?? ${isListening}`)

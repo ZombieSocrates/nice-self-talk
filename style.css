@@ -8,6 +8,7 @@ h1 {
 	text-align: center;
 	position: relative;
 	top: 20px;
+	padding-bottom: 20px;
 }
 
 .hint{ 
@@ -15,13 +16,22 @@ h1 {
 	font-size: 25px;
  }
 
-button {
+.btn-group {
+	justify-content: center;
+	margin-left: 32%;
+	margin-right: 32%;
+}
+
+.btn.btn-outline-secondary {
+	color: #140cb0;
+	padding: 20px 36px;
+	border-radius: 8px;
+	border: 2px solid #140cb0;
+	font-size: 25px;
+}
+
+.btn.btn-outline-secondary:hover {
 	background-color:#140cb0;
 	color: #f68fe0;
-	padding: 20px 36px;
-	width: 25%;
-	border-radius: 8px;
-	border: 2px solid #000000;
-	font-size: 25px;
-	margin: 0 33%;
+	border: 2px solid #f68fe0;
 }
