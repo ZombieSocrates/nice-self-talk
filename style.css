@@ -1,0 +1,27 @@
+body {
+	font-family: Verdana;
+	background-color: #f68fe0;
+}
+
+h1 {
+	font-size: 50px;
+	text-align: center;
+	position: relative;
+	top: 20px;
+}
+
+.hint{ 
+	text-align: center;
+	font-size: 25px;
+ }
+
+button {
+	background-color:#140cb0;
+	color: #f68fe0;
+	padding: 20px 36px;
+	width: 25%;
+	border-radius: 8px;
+	border: 2px solid #000000;
+	font-size: 25px;
+	margin: 0 33%;
+}
