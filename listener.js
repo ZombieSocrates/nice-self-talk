@@ -1,3 +1,6 @@
+const pepText = "You aren't stupid. You're a beautiful flower"
+
+
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 
@@ -18,10 +21,14 @@ recognition.onstart = function () {
 recognition.onresult = function (event) {
   let latestResult = event.results[event.resultIndex]
   if (latestResult.isFinal) {
-      wordsHeard.push(...latestResult[0].transcript.split(" "))
-      // resultIndex += 1
-      console.log(wordsHeard)
+      transcript = latestResult[0].transcript
+      wordsHeard.push(...transcript.split(" ").filter( x => x!= ""))
+      console.log(wordsHeard.join(" "))
       console.log(`Count of words: ${wordsHeard.length}`)
+      if (transcript.indexOf("I'm so stupid") > -1) {
+        const pepTalk = new SpeechSynthesisUtterance(pepText)
+        window.speechSynthesis.speak(pepTalk)
+      }
     }
 }
 
