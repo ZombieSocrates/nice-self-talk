@@ -9,8 +9,13 @@ recognition.continuous = true;
 recognition.lang = "en-US";
 recognition.interimResults = false;
 
-
+const cacheSize = 100;
 let isListening = false;
+
+function limitTranscript(arr, N) {
+  return arr.length <= N ? arr : arr.slice(begin = arr.length - N)
+}
+
 
 recognition.onstart = function () {
   console.log(`Am I listening?? ${isListening}`)
@@ -22,8 +27,11 @@ recognition.onresult = function (event) {
   if (latestResult.isFinal) {
       transcript = latestResult[0].transcript
       wordsHeard.push(...transcript.split(" ").filter( x => x!= ""))
+      wordsHeard = limitTranscript(wordsHeard, cacheSize)
       console.log(wordsHeard.join(" "))
       console.log(`Count of words: ${wordsHeard.length}`)
+      /* TODO: Make this a more generalized regex that picks up on several
+      negative phrases*/
       if (transcript.indexOf("I'm so stupid") > -1) {
         const pepTalk = new SpeechSynthesisUtterance(pepText)
         window.speechSynthesis.speak(pepTalk)
