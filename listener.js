@@ -41,11 +41,16 @@ recognition.onresult = function (event) {
 
 
 
-let micButton = document.getElementById("micOn")
-micButton.addEventListener("click", function () {
+let micButton = document.getElementById("micControl")
+micButton.addEventListener("change", function () {
   if (!isListening) {
     console.log("Turning on Mic")
     isListening = true
     recognition.start()
+  }
+  else {
+    console.log("Turning off Mic")
+    isListening = false
+    recognition.stop()
   }
 })

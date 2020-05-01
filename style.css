@@ -11,37 +11,21 @@ h1 {
 	padding-bottom: 20px;
 }
 
-.hint{ 
-	text-align: center;
+.hint{
+	margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    width: 50%;
+    max-height: 250px;
 	font-size: 25px;
+	padding-bottom: 20px;
  }
-
-.btn-group {
-	justify-content: center;
-	margin-left: 32%;
-	margin-right: 32%;
-}
-
-.btn.btn-outline-secondary {
-	color: #140cb0;
-	padding: 20px 36px;
-	border-radius: 8px;
-	border: 2px solid #140cb0;
-	font-size: 25px;
-}
-
-.btn.btn-outline-secondary:hover {
-	background-color:#140cb0;
-	color: #f68fe0;
-	border: 2px solid #f68fe0;
-}
-
 /* SCRIPT KIDDIE CSS https://www.w3schools.com/howto/howto_css_switch.asp */
 
 .switch {
   justify-content: center;
-  margin-left: 32%;
-  margin-right: 32%;
+  margin-left: 45%;
+  margin-right: 45%;
   position: relative;
   width: 120px;
   height: 68px;
