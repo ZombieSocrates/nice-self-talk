@@ -42,15 +42,18 @@ recognition.onresult = function (event) {
 
 
 let micButton = document.getElementById("micControl")
+let micNotif = document.getElementById("micAdvisory")
 micButton.addEventListener("change", function () {
   if (!isListening) {
+    recognition.start()
     console.log("Turning on Mic")
     isListening = true
-    recognition.start()
+    micNotif.style.visibility = "visible"
   }
   else {
+    recognition.stop()
     console.log("Turning off Mic")
     isListening = false
-    recognition.stop()
+    micNotif.style.visibility = "hidden"
   }
 })
