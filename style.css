@@ -11,6 +11,10 @@ h1 {
 	padding-bottom: 20px;
 }
 
+a {
+   color: #140cb0;
+}
+
 .hint{
 	margin-left: 25%;
     margin-right: 25%;
@@ -24,6 +28,17 @@ h1 {
  .hint.mic-status {
  	visibility: hidden;
  }
+
+.question-header {
+	text-align:left;
+}
+
+.question-response {
+	padding-left:20px;
+	width: 75%;
+}
+
+
 /* SCRIPT KIDDIE CSS https://www.w3schools.com/howto/howto_css_switch.asp */
 
 .switch {
