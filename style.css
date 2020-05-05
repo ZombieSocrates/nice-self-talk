@@ -1,5 +1,16 @@
+@import url(//db.onlinewebfonts.com/c/d4280feab480528a5c1b9c7b210e97bd?family=VAG+Rounded);
+
+@font-face {font-family: "VAG Rounded"; 
+    src: url("//db.onlinewebfonts.com/t/d4280feab480528a5c1b9c7b210e97bd.eot");
+    src: url("//db.onlinewebfonts.com/t/d4280feab480528a5c1b9c7b210e97bd.eot?#iefix") format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/d4280feab480528a5c1b9c7b210e97bd.woff2") format("woff2"), 
+    url("//db.onlinewebfonts.com/t/d4280feab480528a5c1b9c7b210e97bd.woff") format("woff"), 
+    url("//db.onlinewebfonts.com/t/d4280feab480528a5c1b9c7b210e97bd.ttf") format("truetype"), 
+    url("//db.onlinewebfonts.com/t/d4280feab480528a5c1b9c7b210e97bd.svg#VAG Rounded") format("svg"); }
+
+
 body {
-	font-family: Verdana;
+	font-family: VAG Rounded;
 	background-color: #f68fe0;
 }
 
