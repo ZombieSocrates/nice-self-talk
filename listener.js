@@ -1,3 +1,6 @@
+const critPattern = /((I )|(I'm ))((\w|\*|\%)+ ){0,3}((stupid)|(dumb)|(moron)|(suck)|(idiot)|(worthless)|(worst)|(loser)|(s\*\*\*)|(shity))/;
+
+//TODO: Random choice between three redirects
 const pepText = "You aren't stupid. You're a beautiful flower"
 
 
@@ -30,9 +33,7 @@ recognition.onresult = function (event) {
       wordsHeard = limitTranscript(wordsHeard, cacheSize)
       console.log(wordsHeard.join(" "))
       console.log(`Count of words: ${wordsHeard.length}`)
-      /* TODO: Make this a more generalized regex that picks up on several
-      negative phrases*/
-      if (transcript.indexOf("I'm so stupid") > -1) {
+      if (transcript.match(critPattern) !== null) {
         const pepTalk = new SpeechSynthesisUtterance(pepText)
         window.speechSynthesis.speak(pepTalk)
       }
