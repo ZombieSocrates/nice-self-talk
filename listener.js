@@ -1,8 +1,12 @@
-const critPattern = /((I )|(I'm ))((\w|\*|\%)+ ){0,3}((stupid)|(dumb)|(moron)|(suck)|(idiot)|(worthless)|(worst)|(loser)|(s\*\*\*)|(shity))/;
+const critPattern = /((I )|(I'm ))((\w|\*|\%)+ ){0,3}((stupid)|(dumb)|(moron)|(suck)|(idiot)|(worthless)|(terrible)|(awful)|(worst)|(loser)|(s\*\*\*)|(shity))/;
 
-//TODO: Random choice between three redirects
-const pepText = "You aren't stupid. You're a beautiful flower"
-
+const restructQuestions = [
+  "Are you seeing things in black and white, when it's actually more complicated.",
+  "Do you think a friend would say that about you.",
+  "What's the evidence for that statement, and what's the evidence against it.",
+  "Do you want to believe that about yourself.",
+  "Is that based on facts, or on emotions."
+]
 
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
@@ -19,6 +23,11 @@ function limitTranscript(arr, N) {
   return arr.length <= N ? arr : arr.slice(begin = arr.length - N)
 }
 
+function choosePepTalk(questionArr) {
+   const pepIntro = "I think I heard you criticize yourself."
+   let pepIndex = Math.floor(Math.random() * questionArr.length)
+   return `${pepIntro} ${questionArr[pepIndex]}`
+}
 
 recognition.onstart = function () {
   console.log(`Am I listening?? ${isListening}`)
@@ -34,6 +43,7 @@ recognition.onresult = function (event) {
       console.log(wordsHeard.join(" "))
       console.log(`Count of words: ${wordsHeard.length}`)
       if (transcript.match(critPattern) !== null) {
+        const pepText = choosePepTalk(restructQuestions)
         const pepTalk = new SpeechSynthesisUtterance(pepText)
         window.speechSynthesis.speak(pepTalk)
       }
