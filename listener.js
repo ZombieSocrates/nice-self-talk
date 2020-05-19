@@ -1,4 +1,4 @@
-const critPattern = /((I )|(I'm ))((\w|\*|\%)+ ){0,3}((stupid)|(dumb)|(moron)|(suck)|(idiot)|(worthless)|(terrible)|(awful)|(worst)|(loser)|(s\*\*\*)|(shity))/;
+const critPattern = /((I )|(I'm ))((\w|\*|\%)+ ){0,3}((stupid)|(dumb)|(bad)|(moron)|(suck)|(idiot)|(worthless)|(terrible)|(awful)|(worst)|(loser)|(s\*\*\*)|(shity))/;
 
 const restructQuestions = [
   "Are you seeing things in black and white, when it's actually more complicated.",
