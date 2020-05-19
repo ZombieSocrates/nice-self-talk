@@ -15,38 +15,60 @@ body {
 }
 
 h1 {
-	font-size: 50px;
+	font-size: 4rem;
 	text-align: center;
+	color: #f7e240;
+	-webkit-text-stroke: .2rem #a81fa1;
 	position: relative;
-	top: 20px;
-	padding-bottom: 20px;
+	top: 2rem;
+	padding-bottom: 2rem;
 }
 
 a {
-   color: #140cb0;
+   color: #000000;
+   text-decoration: underline;
+}
+
+a:hover {
+  color: #f7e240;
+  background-color: #a81fa1;
+}
+
+.nav-tabs  .nav-link.active {
+  color: #f68fe0;
+  background-color: #140cb0;
+  text-decoration: underline;
 }
 
 .hint{
 	margin-left: 25%;
-    margin-right: 25%;
-    text-align: center;
-    width: 50%;
-    max-height: 250px;
-	font-size: 25px;
-	padding-bottom: 20px;
+  margin-right: 25%;
+  text-align: center;
+  min-width: 33%;
+  max-width: 50%;
+  min-height: 10rem;
+	font-size: 2rem;
+	color:#140cb0;
+  top: 2rem;
+	padding-bottom: 2rem;
  }
 
  .hint.mic-status {
+  padding-top: 2rem;
  	visibility: hidden;
  }
 
 .question-header {
 	text-align:left;
+  padding-left: 2rem;
 }
 
 .question-response {
-	padding-left:20px;
-	width: 75%;
+	padding-left:2rem;
+	min-width: 33%;
+  max-width: 50%;
+  color:#140cb0;
+  font-size: 1.2rem;
 }
 
 .response-bullet {
